@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import { AnimateOnChange } from "react-animation";
 import Button from "./Button";
 import "./Results.css";
+import { ENDPOINT } from "../static/constants";
 
 const Results = (props) => {
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:8080/data")
+    fetch(ENDPOINT)
       .then((res) => res.json())
       .then((result) => {
         setData(result);

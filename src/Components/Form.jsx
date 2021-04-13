@@ -1,6 +1,7 @@
 import "./Form.css";
 import { useState, useEffect } from "react";
 import Button from "./Button";
+import { ENDPOINT } from "../static/constants";
 
 const Form = (props) => {
   const [id, setId] = useState([]);
@@ -16,7 +17,7 @@ const Form = (props) => {
 
   // Since each data point falls under an id, this determines what id the next data object should be
   useEffect(() => {
-    fetch("http://localhost:8080/data")
+    fetch(ENDPOINT)
       .then((res) => res.json())
       .then((result) => {
         setId(result.length + 1);
@@ -34,7 +35,7 @@ const Form = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(JSON.stringify(data));
-    fetch("http://localhost:8080/data", {
+    fetch(ENDPOINT, {
       method: "post",
       headers: {
         "Accept": "application/json",
