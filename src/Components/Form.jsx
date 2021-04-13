@@ -42,6 +42,7 @@ const Form = (props) => {
       },
       body: JSON.stringify(data),
     });
+    props.success();
   };
 
   return (
