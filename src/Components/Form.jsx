@@ -107,7 +107,7 @@ const Form = () => {
         />{" "}
         gm.
         <br />
-        <input type="submit" />
+        <input className = "bouncy-button" type="submit" />
       </form>
     </section>
   );
