@@ -110,7 +110,7 @@ const Form = (props) => {
         />{" "}
         gm.
         <br />
-        <input className = "bouncy-button" type="submit" />
+        <input className = "submit-button" type="submit" />
         <Button onClick={props.back} label = "Back" />
       </form>
     </section>
