@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import Button from "./Button";
 import "./Results.css";
 
-const Result = () => {
+const Result = (props) => {
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -42,6 +43,7 @@ const Result = () => {
             ))}
           </tbody>
         </table>
+        <Button onClick = {props.back} label = "Go Back" />
       </section>
     );
   }
