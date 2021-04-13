@@ -1,12 +1,11 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 const PORT = process.env.PORT || 8080;
 const data = require("./data/data");
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.get("/data", (req, res) => {
   res.send(data.data);
