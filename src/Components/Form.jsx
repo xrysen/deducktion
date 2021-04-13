@@ -34,7 +34,6 @@ const Form = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(JSON.stringify(data));
     fetch(ENDPOINT, {
       method: "post",
       headers: {
