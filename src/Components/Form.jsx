@@ -35,8 +35,8 @@ const Form = () => {
     console.log(JSON.stringify(data));
     fetch("http://localhost:8080/data", {
       method: "post",
-      header: {
-        Accept: "application/json",
+      headers: {
+        "Accept": "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
