@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Button from "./Button";
 import "./Results.css";
 
-const Result = (props) => {
+const Results = (props) => {
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -49,4 +49,4 @@ const Result = (props) => {
   }
 };
 
-export default Result;
+export default Results;
