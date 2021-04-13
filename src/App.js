@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       {mode === INTRO && <Intro form={() => setMode(FORM)} />}
-      {mode === FORM && <Form />}
+      {mode === FORM && <Form back = {() => setMode(INTRO)} />}
     </div>
   );
 }

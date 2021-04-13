@@ -1,7 +1,8 @@
 import "./Form.css";
 import { useState, useEffect } from "react";
+import Button from "./Button";
 
-const Form = () => {
+const Form = (props) => {
   const [id, setId] = useState([]);
   const [data, setData] = useState({
     id: "",
@@ -109,6 +110,7 @@ const Form = () => {
         gm.
         <br />
         <input className = "bouncy-button" type="submit" />
+        <Button onClick={props.back} label = "Back" />
       </form>
     </section>
   );
