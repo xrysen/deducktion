@@ -1,6 +1,11 @@
 .intro-container {
-  margin-top: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
   text-align: center;
+  font-size: 30px;
 }
 
 h1 { 
@@ -15,4 +20,10 @@ h1 {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .intro-container {
+    font-size: 20px;
+  }
 }
