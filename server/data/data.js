@@ -7,7 +7,7 @@ const data = [
     country: "Canada",
     time: "11:35",
     duckQty: 6,
-    food: "Quakers",
+    food: "Quackers",
     foodQty: 100
   },
   {

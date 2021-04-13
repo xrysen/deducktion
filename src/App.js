@@ -5,6 +5,7 @@ import Form from "./Components/Form";
 import Intro from "./Components/Intro";
 import Success from "./Components/Success";
 import Results from "./Components/Results";
+import duckLogo from "./assets/duck.png";
 
 const INTRO = "INTRO";
 const FORM = "FORM";
@@ -14,7 +15,8 @@ const RESULTS = "RESULTS";
 function App() {
   const [mode, setMode] = useState(INTRO);
   return (
-    <div className = "container">
+    <div className="container">
+      <img alt="Logo" src={duckLogo} width={300} />
       <AnimateOnChange duration={1000}>
         {mode === INTRO && (
           <Intro form={() => setMode(FORM)} results={() => setMode(RESULTS)} />
